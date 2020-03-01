@@ -1,5 +1,5 @@
 ---
-- name: "install couchbase"
+- name: "install hellowrld"
   hosts: localhost
   connection: local
   become: yes
