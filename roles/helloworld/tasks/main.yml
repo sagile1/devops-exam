@@ -3,7 +3,7 @@
 - debug: msg="debug msg"
 
 - name: Deply hellowworld by helm
-  shell: helm install kubernetes-helm-hello-world/helloworld-chart  helloworld
+  shell: helm install ./kubernetes-helm-hello-world/helloworld-chart  helloworld
 
 #- name: Deply hellowworld by helm
 #  helm:
