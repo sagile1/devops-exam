@@ -1,4 +1,6 @@
 ---
+
+- debug: msg="debug msg"
 - name: Deply hellowworld by helm
   helm:
     chart:
