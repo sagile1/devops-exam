@@ -4,6 +4,11 @@ pipeline {
             docker { image 'siji/kubectl:v1.5.2' }
     }
     stages {
+
+        stage('echo') {
+        sh 'echo pwd'
+        sh 'echo whoami'
+        }
         stage('github init') {
             steps {
                  checkout([$class: 'GitSCM', branches: [[name: '*/master']],
