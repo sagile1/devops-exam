@@ -4,7 +4,7 @@
 
 - name: Deply hellowworld by helm
   shell: helm install kubernetes-helm-hello-world/helloworld-chart  --generate-name
-  
+
 #- name: Deply hellowworld by helm
 #  helm:
 #    chart:
@@ -16,13 +16,21 @@
 #    name: hellowworld
 #    namespace: default
 
+
 - name: Create autoscale for helloworld
-  k8s:
-    state: present
-    src: roles/helloworld/files/auto_scale.yml
+  shell: kubectl apply -f roles/helloworld/files/auto_scale.yml
 
 - name: Create schedule autoscale for helloworld
-  k8s:
-    state: present
-    src: roles/helloworld/files/schedule_scale.yml
+  shell: kubectl apply -f roles/helloworld/files/auto_scale.yml
 
+#
+#- name: Create autoscale for helloworld
+#  k8s:
+#    state: present
+#    src: roles/helloworld/files/auto_scale.yml
+#
+#- name: Create schedule autoscale for helloworld
+#  k8s:
+#    state: present
+#    src: roles/helloworld/files/schedule_scale.yml
+#
