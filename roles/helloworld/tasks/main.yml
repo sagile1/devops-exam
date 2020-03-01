@@ -3,7 +3,7 @@
 - debug: msg="debug msg"
 
 - name: Deply hellowworld by helm
-  shell: helm install kubernetes-helm-hello-world/helloworld-chart --name helloworld
+  shell: helm install kubernetes-helm-hello-world/helloworld-chart  helloworld
 
 #- name: Deply hellowworld by helm
 #  helm:
@@ -19,10 +19,10 @@
 - name: Create autoscale for helloworld
   k8s:
     state: present
-    src: ../files/auto_scale.yml
+    src: roles/helloworld/files/auto_scale.yml
 
 - name: Create schedule autoscale for helloworld
   k8s:
     state: present
-    src: ../files/schedule_scale.yml
+    src: roles/helloworld/files/schedule_scale.yml
 
