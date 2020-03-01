@@ -22,4 +22,3 @@
     state: present
     src: ../files/schedule_scale.yml
 
-
