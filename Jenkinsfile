@@ -6,8 +6,10 @@ pipeline {
     stages {
 
         stage('echo') {
-        sh 'echo pwd'
-        sh 'echo whoami'
+            steps {
+                sh 'echo pwd'
+                sh 'echo whoami'
+            }
         }
         stage('github init') {
             steps {
