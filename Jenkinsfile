@@ -16,8 +16,7 @@ pipeline {
         }
         stage('Deploy helloworld') {
             steps {
-                    ansiblePlaybook(
-                    playbook: 'helloworld.yml')
+                    ansiblePlaybook(playbook: 'helloworld.yml')
             }
         }
     }
