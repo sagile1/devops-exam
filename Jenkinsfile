@@ -1,5 +1,10 @@
 
 pipeline {
+    agent {
+        node {
+            "master"
+        }
+    }
     stages {
         stage('echo') {
             steps {
