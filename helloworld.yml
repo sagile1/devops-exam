@@ -1,6 +1,7 @@
-- name: "deploy helloworld"
+---
+- name: "install couchbase"
   hosts: localhost
   connection: local
   become: yes
-  rols:
-    - helloworld
+  roles:
+    - { role: helloworld }
