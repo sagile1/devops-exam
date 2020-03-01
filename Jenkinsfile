@@ -1,6 +1,8 @@
 
 pipeline {
-    agent any
+    agent {
+        docker { image 'siji/kubectl:v1.5.2' }
+    }
     stages {
         stage('echo') {
             steps {
