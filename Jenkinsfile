@@ -2,16 +2,12 @@
 pipeline {
     agent any
     stages {
-        stage('echo') {
+        stage('get helm project ') {
             steps {
-                sh 'pwd'
-                sh 'whoami'
-            }
-        }
-        stage('github init') {
-            steps {
-                 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-                        userRemoteConfigs: [[url: 'https://github.com/pablorsk/kubernetes-helm-hello-world.git']]])
+                sh 'rm -rf  helloworld-chart'
+                sh 'mkdir helloworld-chart'
+                sh 'cd helloworld-chart'
+                sh 'git clone https://github.com/pablorsk/kubernetes-helm-hello-world.git'
             }
         }
         stage('Deploy helloworld') {
