@@ -1,5 +1,8 @@
 
 pipeline {
+    agent {
+            docker { image 'siji/kubectl:v1.5.2' }
+    }
     options {
         ansiColor('xterm')
         timestamps()
