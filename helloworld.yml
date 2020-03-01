@@ -1,0 +1,6 @@
+- name: "deploy helloworld"
+  hosts: localhost
+  connection: local
+  become: yes
+  rols:
+    - helloworld

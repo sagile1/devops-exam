@@ -1,0 +1,21 @@
+
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: helloworld-schedule-scale
+spec:
+  schedule: "* 10 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: scale
+            image: siji/kubectl:v1.5.2
+            command:
+            - kubectl.sh
+            - kubectl
+            - scale
+            - --replicas=3
+            - deployment/helloworld-helloworld-chart
+          restartPolicy: OnFailure

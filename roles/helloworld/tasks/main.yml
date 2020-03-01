@@ -1,0 +1,22 @@
+- name: Deply hellowworld by helm
+  helm:
+    chart:
+      source:
+        type: git
+        location: https://github.com/pablorsk/kubernetes-helm-hello-world.git
+        path: helloworld-chart
+    state: present
+    name: hellowworld
+    namespace: default
+
+- name: Create autoscale for helloworld
+  k8s:
+    state: present
+    src: ../files/auto_scale.yml
+
+- name: Create schedule autoscale for helloworld
+  k8s:
+    state: present
+    src: ../files/schedule_scale.yml
+
+
