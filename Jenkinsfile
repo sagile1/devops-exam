@@ -1,10 +1,6 @@
 
 pipeline {
-    agent {
-            docker { image 'siji/kubectl:v1.5.2' }
-    }
     stages {
-
         stage('echo') {
             steps {
                 sh 'echo pwd'
@@ -25,3 +21,5 @@ pipeline {
         }
     }
 }
+
+
