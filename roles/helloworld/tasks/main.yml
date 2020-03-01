@@ -4,17 +4,17 @@
 
 - name: Deply hellowworld by helm
   shell: helm install kubernetes-helm-hello-world/helloworld-chart --name helloworld
-  
-- name: Deply hellowworld by helm
-  helm:
-    chart:
-      source:
-        type: git
-        location: https://github.com/pablorsk/kubernetes-helm-hello-world.git
-        path: helloworld-chart
-    state: present
-    name: hellowworld
-    namespace: default
+
+#- name: Deply hellowworld by helm
+#  helm:
+#    chart:
+#      source:
+#        type: git
+#        location: https://github.com/pablorsk/kubernetes-helm-hello-world.git
+#        path: helloworld-chart
+#    state: present
+#    name: hellowworld
+#    namespace: default
 
 - name: Create autoscale for helloworld
   k8s:
