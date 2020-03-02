@@ -2,6 +2,12 @@
 pipeline {
     agent any
     stages {
+        stage('github init') {
+            steps {
+                 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                        userRemoteConfigs: [[url: 'https://github.com/sagile1/devops-exam.git']]])
+            }
+        }
         stage('get helm project ') {
             steps {
                 sh 'rm -rf kubernetes-helm-hello-world'
