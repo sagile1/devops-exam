@@ -2,6 +2,9 @@
 pipeline {
     agent any
     stages {
+        stage ('echo') {
+        sh 'pwd'
+        }
         stage('github init') {
             steps {
                  checkout([$class: 'GitSCM', branches: [[name: '*/master']],
