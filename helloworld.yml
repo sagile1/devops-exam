@@ -4,4 +4,4 @@
   connection: local
   become: yes
   roles:
-    - { role: helloworld }
+    - helloworld
