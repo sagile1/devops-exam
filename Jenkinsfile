@@ -3,7 +3,9 @@ pipeline {
     agent any
     stages {
         stage ('echo') {
-        sh 'pwd'
+            steps {
+                sh 'pwd'
+            }
         }
         stage('github init') {
             steps {
