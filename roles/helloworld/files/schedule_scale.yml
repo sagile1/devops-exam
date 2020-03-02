@@ -17,5 +17,5 @@ spec:
             - kubectl
             - scale
             - --replicas=3
-            - deployment/helloworld
+            - deployment/helloworld-helloworld-chart
           restartPolicy: OnFailure
