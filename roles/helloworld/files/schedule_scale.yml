@@ -2,7 +2,7 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: helloworld_cronjob
+  name: helloworld-cronjob
 spec:
   schedule: "* 10 * * *"
   jobTemplate:
