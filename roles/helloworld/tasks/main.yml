@@ -1,7 +1,7 @@
 ---
 
 - name: Deply hellowworld by helm
-  shell: helm install kubernetes-helm-hello-world/helloworld-chart  --generate-name
+  shell: helm install helloworld kubernetes-helm-hello-world/helloworld-chart
 
 #- name: Deply hellowworld by helm
 #  helm:

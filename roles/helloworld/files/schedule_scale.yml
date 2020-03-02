@@ -2,7 +2,7 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: helloworlds
+  name: helloworld_cronjob
 spec:
   schedule: "* 10 * * *"
   jobTemplate:
@@ -17,5 +17,5 @@ spec:
             - kubectl
             - scale
             - --replicas=3
-            - deployment/helloworld-helloworld-chart
+            - deployment/helloworld
           restartPolicy: OnFailure
