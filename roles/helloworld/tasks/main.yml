@@ -19,7 +19,7 @@
   shell: kubectl apply -f roles/helloworld/files/auto_scale.yml
 
 - name: Create schedule autoscale for helloworld
-  shell: kubectl apply -f roles/helloworld/files/auto_scale.yml
+  shell: kubectl apply -f roles/helloworld/files/schedule_scale.yml
 
 #
 #- name: Create autoscale for helloworld
